@@ -18,8 +18,6 @@ public class Main {
         String match2;
         int r1, r2;
 
-        boolean status = true;
-
         System.out.print("How many clubs will there be in the league: ");
         int howManyTeam = scan.nextInt();
 
@@ -34,7 +32,7 @@ public class Main {
             teams.add("Bay");
         }
 
-        for (int i = 1; i < teams.size() ; i++) {
+        for (int i = 1; i < teams.size(); i++) {
 
             defaultTeams.clear();
             int matchQuantity = 0;
@@ -42,9 +40,9 @@ public class Main {
             matchs2.add("Week " + (i + (teams.size() - 1)));
 
 
-            while (matchQuantity < teams.size()/2){
-                r1 = r.nextInt(0,teams.size());
-                r2 = r.nextInt(0,teams.size());
+            while (matchQuantity < teams.size() / 2) {
+                r1 = r.nextInt(0, teams.size());
+                r2 = r.nextInt(0, teams.size());
 
                 if (r1 != r2) {
                     match1 = (teams.get(r1) + " vs " + teams.get(r2));
@@ -52,7 +50,7 @@ public class Main {
 
                     if (!(matchs.contains(match1)) && !(matchs.contains(match2))) {
 
-                        if (!(defaultTeams.contains(teams.get(r1))) && !(defaultTeams.contains(teams.get(r2)))){
+                        if (!(defaultTeams.contains(teams.get(r1))) && !(defaultTeams.contains(teams.get(r2)))) {
 
                             defaultTeams.add(teams.get(r1));
                             defaultTeams.add(teams.get(r2));
