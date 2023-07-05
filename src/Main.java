@@ -13,7 +13,6 @@ public class Main {
         ArrayList<String> teams = new ArrayList<>();
         ArrayList<String> defaultTeams = new ArrayList<>();
 
-
         String match1;
         String match2;
         int r1, r2;
@@ -28,11 +27,11 @@ public class Main {
             teams.add(clubName);
         }
 
-        if (teams.size() % 2 != 0) {
+        if (howManyTeam % 2 != 0) {
             teams.add("Bay");
         }
 
-        for (int i = 1; i < teams.size(); i++) {
+        for (int i = 1; i <= teams.size(); i++) {
 
             defaultTeams.clear();
             int matchQuantity = 0;
@@ -40,7 +39,7 @@ public class Main {
             matchs2.add("Week " + (i + (teams.size() - 1)));
 
 
-            while (matchQuantity < teams.size() / 2) {
+            while (matchQuantity < (teams.size() / 2)-1) {
                 r1 = r.nextInt(0, teams.size());
                 r2 = r.nextInt(0, teams.size());
 
